@@ -4,11 +4,14 @@
 				<meta charset="UTF-8">
 				<title>Learn Enough: JavaScript</title>
 				<script>
-						const dayOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday",
-								"Thursday", "Friday", "Saturday"];
 						let now = new Date();
-						let dayName = dayOfTheWeek[now.getDay()];
-						alert(`Hello, world! Happy ${dayName}.`);
+let rando = new Date('January 1, 1971');
+console.log(rando);
+						let dayOfTheWeek = date => {
+								const dayOfTheWeek = ["Sunday", "Monday", "Tuesday",
+										"Wednesday", "Thursday", "Friday", "Saturday"];
+								return daysOfTheWeek[date.getDay()];
+						alert(`Hello, world! Happy ${dayOfTheWeek(now)}.`);
 				</script>
 </head>
 <body>
