@@ -6,5 +6,5 @@ let day = date => {
 }
 
 let greeting = date => {
-		return `Hope you are having a great ${date}.`)
+		return `Hope you are having a great ${date}.`;
 };
