@@ -4,3 +4,7 @@ let day = date => {
 		const dayOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 		return dayOfTheWeek[date.getDay()];
 }
+
+let greeting = date => {
+		return `Hope you are having a great ${date}.`)
+};
