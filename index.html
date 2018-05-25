@@ -7,11 +7,11 @@
 						let now = new Date();
 let rando = new Date('January 1, 1971');
 console.log(rando);
-						let dayOfTheWeek = date => {
-								const dayOfTheWeek = ["Sunday", "Monday", "Tuesday",
-										"Wednesday", "Thursday", "Friday", "Saturday"];
-								return daysOfTheWeek[date.getDay()];
-						alert(`Hello, world! Happy ${dayOfTheWeek(now)}.`);
+let day = date => {
+		const dayOfTheWeek = ["Sunday", "Monday", "Tuesday",
+				"Wednesday", "Thursday", "Friday", "Saturday"];
+		return dayOfTheWeek[date.getDay()];
+						alert(`Hello, world! Happy ${day(now)}.`);
 				</script>
 </head>
 <body>
