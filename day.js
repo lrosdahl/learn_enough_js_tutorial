@@ -5,6 +5,3 @@ let day = date => {
 		return dayOfTheWeek[date.getDay()];
 }
 
-let greeting = date => {
-		return `Hope you are having a great ${date}.`;
-};
