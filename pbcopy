@@ -1,0 +1,11 @@
+# Functions
+function commit() {
+		git add .
+		if [ -n "$1" ]
+		then
+				git commit -am "$1"
+		else
+				git commit -am "Update."
+		fi
+		git push -u origin master
+}
