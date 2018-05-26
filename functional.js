@@ -40,7 +40,7 @@ function dakotasRegEx(a) {
 let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // This was my solution before I saw what he did
-function combine(a, b) {
+function combine(a) {
 		return a.reduce((curVal, nextVal) => curVal + nextVal);
 }
 
@@ -58,11 +58,19 @@ function imperativeLengths(states) {
 		return lengths;
 }
 
+//function stateLength(states) {
+//		return states.reduce((lengths, state) => {
+//				lengths[state] = state.length;
+//				return lengths;
+//		}, {});
+//}
+
 function stateLength(states) {
-		return states.reduce((lengths, state) => {
-				lengths[state] = state.length;
-				return lengths;
-		}, {});
+		return states.reduce((lengths, state) => { lengths[state] = state.length; return lengths; }, {});
+}
+
+function product(a) {
+		return a.reduce((total, next) => total *= next);
 }
 
 console.log(stateLength(states));

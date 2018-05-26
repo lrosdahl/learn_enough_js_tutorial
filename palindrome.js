@@ -8,3 +8,6 @@ let reverse = string => {
 		return string.toLowerCase().split("").reverse().join("");
 }
 
+function Phrase(content) {
+		this.content = content;
+}
