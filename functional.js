@@ -35,4 +35,34 @@ function dakotasRegEx(a) {
 		return dakotas(a.filter(n => n.split(/\s+/).length === 2));
 }
 
-console.log(dakotasRegEx(states));
+// *************************Reduce*************************
+
+let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// This was my solution before I saw what he did
+function combine(a, b) {
+		return a.reduce((curVal, nextVal) => curVal + nextVal);
+}
+
+// His solution
+function functionalSum(a) {
+		return a.reduce((total, n) => { return total += n });
+};
+
+// Imperative solution
+function imperativeLengths(states) {
+		let lengths = {};
+		states.forEach(function(state) {
+				lengths[state] = state.length;
+		});
+		return lengths;
+}
+
+function stateLength(states) {
+		return states.reduce((lengths, state) => {
+				lengths[state] = state.length;
+				return lengths;
+		}, {});
+}
+
+console.log(stateLength(states));
