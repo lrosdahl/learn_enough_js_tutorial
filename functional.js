@@ -20,14 +20,17 @@ function functionalMap(states) {
 
 // *************************Filter*************************
 
+// Return only states that are single words
 function singleWord(a) {
 		return a.filter(n => n.split(/\s+/).length === 1);
 };
 
+// Return only states with 'Dakota' in their names
 function dakotas(a) {
 		return a.filter(n => n.includes('Dakota'));
 }
 
+// Return only two name states with 'Dakota' in their names
 function dakotasRegEx(a) {
 		return dakotas(a.filter(n => n.split(/\s+/).length === 2));
 }
