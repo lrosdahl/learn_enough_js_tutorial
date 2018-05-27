@@ -1,10 +1,16 @@
 // Function to find if a word or phrase is a palindrome
 
-// Reverses a string.
-function reverse(string) {
-		return Array.from(string).reverse().join("");
+// Adds the reverses-a-string function to the String object
+String.prototype.reverse = function () {
+		return Array.from(this).reverse().join("");
 }
 
+// See if a string is blank
+String.prototype.blank = function() {
+		return !!(this.match(/^\s*$/));
+}
+
+// Defines a Phrase object
 function Phrase(content) {
 		this.content = content;
 
@@ -20,22 +26,23 @@ function Phrase(content) {
 
 		// Returns true for a palindrome, false otherwise.
 		this.palindrome = function palindrome() {
-				return this.processedContent() === reverse(this.processedContent());
+				return this.processedContent() === this.processedContent().reverse();
 		}
 }
 
-function TranslatedPhrase(content, translation) {
-		this.content = content;
-		this.translation = translation;
-
-		// Returns true for a palindrome, false otherwise.
-		this.processedContent = function() {
-				return this.processor(this.translation);
-		}
-}
-
-
-TranslatedPhrase.prototype = new Phrase();
+// Use prototype to inherit another Objects methods
+//function TranslatedPhrase(content, translation) {
+//		this.content = content;
+//		this.translation = translation;
+//
+//		// Returns true for a palindrome, false otherwise.
+//		this.processedContent = function() {
+//				return this.processor(this.translation);
+//		}
+//}
+//
+//
+//TranslatedPhrase.prototype = new Phrase();
 
 // *********************************
 
